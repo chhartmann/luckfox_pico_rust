@@ -13,7 +13,7 @@ ARG GITHUB_TOKEN
 # Install dependencies
 RUN apt-get update \
     && apt-get install -y git curl llvm-dev libclang-dev clang unzip gdb-multiarch \
-    libssl-dev pkg-config qemu-user file cpio rsync \
+    libssl-dev pkg-config qemu-user file cpio rsync wget \
     git ssh make gcc gcc-multilib g++-multilib module-assistant expect g++ gawk texinfo bison flex fakeroot cmake gperf autoconf \
     device-tree-compiler libncurses5-dev pkg-config bc python-is-python3 passwd openssl openssh-server openssh-client vim \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts
