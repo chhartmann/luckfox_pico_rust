@@ -29,7 +29,9 @@ RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- \
 ENV PATH=${PATH}:/home/${CONTAINER_USER}/.cargo/bin
 
 # Set default toolchain
-RUN rustup default stable
+RUN rustup default nightly
+RUN rustup target add --toolchain nightly armv7-unknown-linux-gnueabihf
+RUN rustup component add rust-src --toolchain nightly-x86_64-unknown-linux-gnu
 RUN rustup component add clippy
 RUN rustup component add rustfmt
 
