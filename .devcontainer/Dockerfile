@@ -13,7 +13,7 @@ ARG GITHUB_TOKEN
 # Install dependencies
 RUN apt-get update \
     && apt-get install -y git curl llvm-dev libclang-dev clang unzip gdb-multiarch \
-    libssl-dev pkg-config qemu-user file cpio git ssh make \
+    libssl-dev pkg-config qemu-user file cpio git ssh make wget \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts
 
 # Set users
