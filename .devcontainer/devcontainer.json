@@ -29,16 +29,15 @@
       "extensions": [
         "rust-lang.rust-analyzer",
         "tamasfe.even-better-toml",
-        "serayuzgur.crates",
         "mutantdino.resourcemonitor",
         "yzhang.markdown-all-in-one",
         "ms-vscode.cpptools",
         "actboy168.tasks",
+        "fill-labs.dependi"
       ]
     }
   },
-  "forwardPorts": [
-  ],
+  "forwardPorts": [],
   "workspaceMount": "source=${localWorkspaceFolder},target=/home/luckfox/luckfox_pico_rust,type=bind,consistency=cached",
   "workspaceFolder": "/home/luckfox/luckfox_pico_rust"
 }

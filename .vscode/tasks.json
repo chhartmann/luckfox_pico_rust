@@ -4,7 +4,7 @@
     {
       "label": "Build",
       "type": "shell",
-      "command": "scripts/build.sh ${input:buildMode}",
+      "command": "cargo build -Zbuild-std",
       "options": {
         "cwd": "${workspaceFolder}"
       },
@@ -14,28 +14,20 @@
       }
     },
     {
-      "label": "Build & Flash",
+      "label": "Run with QEMU",
       "type": "shell",
-      "command": "scripts/flash.sh ${input:buildMode}",
+      "command": "qemu-arm -L /home/luckfox/sysdrv/source/buildroot/buildroot-2023.02.6/output/host/arm-buildroot-linux-uclibcgnueabihf/sysroot ./target/armv7-unknown-linux-uclibceabihf/debug/luckfox_pico_rust",
       "options": {
         "cwd": "${workspaceFolder}"
-      },
-      "group": {
-        "kind": "test",
-        "isDefault": true
       }
     },
-  ],
-  "inputs": [
     {
-      "type": "pickString",
-      "id": "buildMode",
-      "description": "Select the build mode:",
-      "options": [
-        "release",
-        "debug"
-      ],
-      "default": "release"
+      "label": "Run with QEMU with gdb",
+      "type": "shell",
+      "command": "qemu-arm -L /home/luckfox/sysdrv/source/buildroot/buildroot-2023.02.6/output/host/arm-buildroot-linux-uclibcgnueabihf/sysroot -g 1234 ./target/armv7-unknown-linux-uclibceabihf/debug/luckfox_pico_rust",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
     }
   ]
 }
