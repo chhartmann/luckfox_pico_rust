@@ -3,3 +3,4 @@ target = "armv7-unknown-linux-uclibceabihf"
 
 [target.armv7-unknown-linux-uclibceabihf]
 linker = "/home/luckfox/sysdrv/source/buildroot/buildroot-2023.02.6/output/host/bin/arm-buildroot-linux-uclibcgnueabihf-gcc"
+runner = "qemu-arm -L /home/luckfox/sysdrv/source/buildroot/buildroot-2023.02.6/output/host/arm-buildroot-linux-uclibcgnueabihf/sysroot"

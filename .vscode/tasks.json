@@ -16,7 +16,7 @@
     {
       "label": "Run with QEMU",
       "type": "shell",
-      "command": "qemu-arm -L /home/luckfox/sysdrv/source/buildroot/buildroot-2023.02.6/output/host/arm-buildroot-linux-uclibcgnueabihf/sysroot ./target/armv7-unknown-linux-uclibceabihf/debug/luckfox_pico_rust",
+      "command": "cargo run -Zbuild-std",
       "options": {
         "cwd": "${workspaceFolder}"
       }
